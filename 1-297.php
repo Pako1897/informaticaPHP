@@ -5,27 +5,33 @@ $n2=0;
 
 if($_POST)
 {
+
     $operazione=$_POST['operazione'];
 
-    if($operazione='addizione')
+    if($operazione=='addizione')
     {
-        echo n1+n2;
+        $ris=$_POST['n1']+$_POST['n2'];
+        echo "risultato: $ris";
     }
-    else if($operazione='sottrazione')
+    else if($operazione=='sottrazione')
     {
-        echo n1-n2;
+        $ris=$_POST['n1']-$_POST['n2'];
+        echo "risultato: $ris";
     }
-    else if($operazione='moltiplicazione')
+    else if($operazione=='moltiplicazione')
     {
-        echo n1*n2;
+        $ris=$_POST['n1']*$_POST['n2'];
+        echo "risultato: $ris";
     }
-    else if($operazione='divisione')
+    else if($operazione=='divisione')
     {
-        echo n1/n2;
+        $ris=$_POST['n1']/$_POST['n2'];
+        echo "risultato: $ris";
     }
-    else if($operazione='quadrato')
+    else if($operazione=='quadrato')
     {
-        echo n1*n1+n2*n2;
+        $ris=$_POST['n1']*$_POST['n1'];
+        echo "risultato: $ris";
     }
 }
 
@@ -38,7 +44,7 @@ else
     NUMERO 2: <input type="text" name="n2">
     <br>
 
-    SELEZIONARE L'OPERAZIONE: <SELECT name=operazione>
+    SELEZIONARE L'OPERAZIONE: <SELECT name="operazione">
     <br>
     <option value="addizione">Addizione
     </option>
@@ -51,6 +57,8 @@ else
     <br>
     <option value="quadrato">Quadrato</option>
     </select>
+
+    <input type="submit">
 <?php
 }
 ?>
